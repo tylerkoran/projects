@@ -1,6 +1,5 @@
 from random import randint
 from cs50 import SQL
-
 from asciiArt import asciiArt
 
 db = SQL("sqlite:///pokemon.db")
@@ -41,6 +40,7 @@ def userNewPokemon(yourPokemon, place):
         db.execute("SELECT * FROM moves WHERE moveName = ?", yourCurrentPokemon["move3"])[0],
         db.execute("SELECT * FROM moves WHERE moveName = ?", yourCurrentPokemon["move4"])[0]
     ]
+    
     ''' printing choice '''
     input("ASH chooses " + yourCurrentPokemon["pokemonName"] + "!")
     input(yourCurrentPokemon["pokemonName"] + " has " + str(yourCurrentPokemon["hp"]) + " HP.")
@@ -64,6 +64,7 @@ def opponentNewPokemon(i, opponentPokemon, place):
         db.execute("SELECT * FROM moves WHERE moveName = ?", opponentCurrentPokemon["move3"])[0],
         db.execute("SELECT * FROM moves WHERE moveName = ?", opponentCurrentPokemon["move4"])[0]
     ]
+    
     ''' printing choice and HP of both players' chosen Pokemon '''
     asciiArt(opponentCurrentPokemon["pokemonName"])
     input(placesAll[place]["trainer"] + " chooses " + opponentCurrentPokemon["pokemonName"] + "!")
@@ -138,7 +139,6 @@ def fight(yourPokemon, opponentPokemon, place):
 
         choice["pp"] -= 1
         input(opponentCurrentPokemon["pokemonName"] + " uses " + choice["moveName"] + "!")
-
 
         ''' inflicting damage and checking if user Pokemon fainted, then printing user current Pokemon HP '''
         damage = int(choice["damage"] * opponentCurrentPokemon["level"] / 20)
