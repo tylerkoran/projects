@@ -2,7 +2,7 @@ from cs50 import SQL
 from helpers import fight
 
 input("\nWELCOME TO THE POKEMON CHALLENGE. YOUR GOAL IS TO BEAT THE OPPONENTS WITHOUT THE ABILITY TO RESTORE YOUR POKEMON THROUGH THE USE OF A POKEMON CENTER.")
-input("\nCredit to pokemondb.net for information on different Pokemon, Pokemon moves, and information on the Pokemon world in general. Credit also to bulbapedia.bulbagarden.net for information on different Pokemon moves. Lastly, credit to Maija Haavisto of fiikus.net for the wonderful Ascii Art.")
+input("\nCredit to, of course, Nintendo and Game Freak for the Pokemon games. Credit to pokemondb.net for information on different Pokemon, Pokemon moves, and information on the Pokemon world in general. Credit also to bulbapedia.bulbagarden.net for information on different Pokemon moves. Lastly, credit to Maija Haavisto of fiikus.net for the wonderful Ascii Art.")
 
 db = SQL("sqlite:///pokemon.db")
 
