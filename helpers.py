@@ -72,7 +72,7 @@ def opponentNewPokemon(i, opponentPokemon, place):
 
 
 def fight(yourPokemon, opponentPokemon, place):
-    input("\n\nYou arrive at " + placesAll[place]["location"] + " and see " + placesAll[place]["description"] + " You walk inside and see someone standing in the entryway. \"Hello, my name is " + placesAll[place]["trainer"] + ". " + placesAll[place]["phrase1"] + "\"\n")
+    input("\n\n\nYou arrive at " + placesAll[place]["location"] + " and see " + placesAll[place]["description"] + " You walk inside and see someone standing in the entryway. \"Hello, my name is " + placesAll[place]["trainer"] + ". " + placesAll[place]["phrase1"] + "\"\n")
 
     ''' grab current user and opponent pokemon and moves '''
     user = userNewPokemon(yourPokemon, place)
